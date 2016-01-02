@@ -7,27 +7,27 @@
 
 # Entrypoint
 def main()
-	print(cracklepop_numbers(1, 100))
+  print(cracklepop_numbers(1, 100))
 end
 
 # Generates CracklePop number sequence from the specified range.
 def cracklepop_numbers(from, to)
-	(from..to).to_a.map{ |n| cracklepop_number(n)}
+  (from..to).to_a.map{ |n| cracklepop_number(n)}
 end
 
 # Transforms the specified number according to CraklePop rules.
 def cracklepop_number(number)
-	ret = number
-	ret = 'Crackle' if divisible_by(number, 3)
-	ret = 'Pop' if divisible_by(number, 5)
-	ret = 'CracklePop' if divisible_by(number, 3) and divisible_by(number, 5)
+  ret = number
+  ret = 'Crackle' if divisible_by(number, 3)
+  ret = 'Pop' if divisible_by(number, 5)
+  ret = 'CracklePop' if divisible_by(number, 3) and divisible_by(number, 5)
 
-	ret
+  ret
 end
 
 # Checks if number is divisible by the specified number.
 def divisible_by(number, div_by)
-	number % div_by == 0
+  number % div_by == 0
 end
 
 main()

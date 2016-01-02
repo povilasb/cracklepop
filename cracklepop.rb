@@ -6,7 +6,7 @@
 #
 
 # Entrypoint
-def main()
+def main
   print(cracklepop_numbers(1, 100))
 end
 
@@ -30,4 +30,4 @@ def divisible_by(number, div_by)
   number % div_by == 0
 end
 
-main()
+main

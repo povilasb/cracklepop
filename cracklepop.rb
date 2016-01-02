@@ -30,4 +30,4 @@ def divisible_by(number, div_by)
   number % div_by == 0
 end
 
-main
+main if __FILE__ == $PROGRAM_NAME

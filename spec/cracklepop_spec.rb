@@ -16,6 +16,21 @@ describe 'divisible_by' do
   end
 end
 
+describe 'divisible_by_mult?' do
+  it 'returns true when number is divisible by all of the specified numbers' do
+    divisible = divisible_by_mult?(15, 3, 5)
+
+    expect(divisible).to eq(true)
+  end
+
+  it 'returns false when number is not divisible by at least one of the ' \
+    'specified numbers' do
+    divisible = divisible_by_mult?(15, 3, 6)
+
+    expect(divisible).to eq(false)
+  end
+end
+
 describe 'cracklepop_number' do
   it 'returns the same number if its not divisible by 3 nor by 5' do
     number = cracklepop_number(7)

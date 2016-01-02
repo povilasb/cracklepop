@@ -18,19 +18,16 @@ end
 # Transforms the specified number according to CraklePop rules.
 def cracklepop_number(number)
 	ret = number
-	ret = 'Crackle' if div_by_3(number)
-	ret = 'Pop' if div_by_5(number)
-	ret = 'CracklePop' if div_by_3(number) and div_by_5(number)
+	ret = 'Crackle' if divisible_by(number, 3)
+	ret = 'Pop' if divisible_by(number, 5)
+	ret = 'CracklePop' if divisible_by(number, 3) and divisible_by(number, 5)
 
 	ret
 end
 
-def div_by_3(number)
-	number % 3 == 0
-end
-
-def div_by_5(number)
-	number % 5 == 0
+# Checks if number is divisible by the specified number.
+def divisible_by(number, div_by)
+	number % div_by == 0
 end
 
 main()

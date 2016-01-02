@@ -52,7 +52,17 @@ describe 'cracklepop_numbers' do
   it 'generates number array with cracklepop translated items' do
     numbers = cracklepop_numbers(1, 10)
 
-    expect(numbers).to eq([1, 2, 'Crackle', 4, 'Pop', 'Crackle', 7,
-       8, 'Crackle', 'Pop'])
+    expect(numbers).to eq([
+      1,
+      2,
+      'Crackle',
+      4,
+      'Pop',
+      'Crackle',
+      7,
+      8,
+      'Crackle',
+      'Pop'
+    ])
   end
 end

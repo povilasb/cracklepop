@@ -12,7 +12,7 @@ end
 
 # Generates CracklePop number sequence from the specified range.
 def cracklepop_numbers(from, to)
-  (from..to).to_a.map{ |n| cracklepop_number(n)}
+  (from..to).to_a.map { |n| cracklepop_number(n) }
 end
 
 # Transforms the specified number according to CraklePop rules.

@@ -20,7 +20,7 @@ def cracklepop_number(number)
   ret = number
   ret = 'Crackle' if divisible_by(number, 3)
   ret = 'Pop' if divisible_by(number, 5)
-  ret = 'CracklePop' if divisible_by(number, 3) and divisible_by(number, 5)
+  ret = 'CracklePop' if divisible_by(number, 3) && divisible_by(number, 5)
 
   ret
 end

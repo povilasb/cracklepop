@@ -18,9 +18,9 @@ end
 # Transforms the specified number according to CraklePop rules.
 def cracklepop_number(number)
   ret = number
-  ret = 'Crackle' if divisible_by(number, 3)
-  ret = 'Pop' if divisible_by(number, 5)
-  ret = 'CracklePop' if divisible_by(number, 3) && divisible_by(number, 5)
+  ret = 'Crackle' if number.divisible_by?(3)
+  ret = 'Pop' if number.divisible_by?(5)
+  ret = 'CracklePop' if number.divisible_by?(3) && number.divisible_by?(5)
 
   ret
 end
@@ -28,6 +28,13 @@ end
 # Checks if number is divisible by the specified number.
 def divisible_by(number, div_by)
   number % div_by == 0
+end
+
+# Extends Integer class with divisibly_by predicate.
+class Integer
+  def divisible_by?(number)
+    divisible_by(self, number)
+  end
 end
 
 main if __FILE__ == $PROGRAM_NAME
